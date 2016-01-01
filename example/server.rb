@@ -42,7 +42,7 @@ loop do
   end
 
   conn.on(:stream) do |stream|
-    log = Logger.new(stream.id)
+    log = ExampleHelper::Logger.new(stream.id)
     req, buffer = {}, ''
 
     stream.on(:active) { log.info 'cliend opened new stream' }

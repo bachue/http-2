@@ -50,7 +50,7 @@ conn.on(:frame_received) do |frame|
 end
 
 stream = conn.new_stream
-log = Logger.new(stream.id)
+log = ExampleHelper::Logger.new(stream.id)
 
 conn.on(:promise) do |promise|
   promise.on(:headers) do |h|

@@ -8,12 +8,14 @@ require 'uri'
 
 DRAFT = 'h2'
 
-class Logger
-  def initialize(id)
-    @id = id
-  end
+module ExampleHelper
+  class Logger
+    def initialize(id)
+      @id = id
+    end
 
-  def info(msg)
-    puts "[Stream #{@id}]: #{msg}"
+    def info(msg)
+      puts "[Stream #{@id}]: #{msg}"
+    end
   end
 end
